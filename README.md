@@ -13,13 +13,15 @@ Using this app you can create notes as well as delete them and add new ones.
 
 ## Links    
 https://github.com/Fitbert/ExpressJS-NoteTaker.git
+https://git.heroku.com/albert-notes.git
+
 
 
 ## Credits
-chatgpt
-xpertlerning
-mdm
-express pages
+*chatgpt
+*xpertlerning
+*mdm
+*express pages
 
 
 
@@ -32,5 +34,5 @@ express pages
 ## Features
     save a note
     delete a note
-    
+
 
