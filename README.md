@@ -16,7 +16,10 @@ https://github.com/Fitbert/ExpressJS-NoteTaker.git
 
 
 ## Credits
-
+chatgpt
+xpertlerning
+mdm
+express pages
 
 
 
@@ -27,5 +30,7 @@ https://github.com/Fitbert/ExpressJS-NoteTaker.git
 
 
 ## Features
-
+    save a note
+    delete a note
+    
 
