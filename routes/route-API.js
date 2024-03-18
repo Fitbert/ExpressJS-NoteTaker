@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router(); // Import and create an instance of Router
+const router = express.Router(); 
 const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 
@@ -18,21 +18,27 @@ router.post('/api/notes', (req, res) => {
   const newFeedback = {
     title: req.body.title,
     text: req.body.text,
-    id: uuidv4(),
+    id: (req.body.id)
   };
   dbJson.push(newFeedback);
   fs.writeFileSync("db/db.json",JSON.stringify(dbJson));
   res.json(dbJson);
 });
 
+
 router.delete('/api/notes/:id', (req, res) => {
-  let dNote = fs.readFileSync("db/db.json', 'utf8'");
-  const dataJSON =  JSON.parse(dNote);
-  const jots = dataJSON.filter((note) => { 
-    return note.id !== req.params.id;
-  });
-  fs.writeFileSync("db/db.json",JSON.stringify(jots));
-  res.json("Deleted notes.");
+  try {
+    let dNote = fs.readFileSync("db/db.json", "utf8");
+    const dataJSON = JSON.parse(dNote);
+    const updatedNotes = dataJSON.filter((note) => {
+      return note.id !== parseInt(req.params.id);
+    });
+    fs.writeFileSync("db/db.json", JSON.stringify(updatedNotes));
+    res.json("Note deleted successfully.");
+  } catch (error) {
+    console.error("Error deleting note:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 module.exports = router;
