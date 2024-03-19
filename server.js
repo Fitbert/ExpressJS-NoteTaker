@@ -2,7 +2,7 @@ const express = require('express');
 const routeHtml = require('./routes/routes-Html'); 
 const routeAPI = require('./routes/route-API'); 
 
-const PORT = process.env.PORT || 8800;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -15,4 +15,3 @@ app.use(routeAPI);
 app.listen(PORT, () => {
     console.log(`Running on http://localhost:${PORT}`);
 });
-
