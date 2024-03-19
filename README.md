@@ -13,7 +13,7 @@ Using this app you can create notes as well as delete them and add new ones.
 
 ## Links    
 https://github.com/Fitbert/ExpressJS-NoteTaker.git
-https://git.heroku.com/albert-notes.git
+https://evening-brook-18599-bb8cfc449843.herokuapp.com/
 
 
 
